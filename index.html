@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,60 +25,67 @@
           <span>
             <img src="images/build.svg" alt="Selo Rockseat" />
           </span>
-          <img
-            src="images/pp.jpg"
-            alt="Foto Pessoal"
-          />
+          <img src="images/pp.jpg" alt="Foto Pessoal" />
         </div>
-        <h1>Allan Reymond</h1>
-        <a href="">
+        <h1 id="userName">Allan Reymond</h1>
+        <a href="https://github.com/AllanRDS" target="_blank">
           <img src="images/github.svg" alt="icone github" />
           AllanRDS
         </a>
 
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-          <li>
+        <ul id="socialLinks">
+          <li class="youtube">
             <a
               href="https://www.youtube.com/channel/UCxIQvT8QN7hH3kadLpF3Ppw?&ab_channel=DanEgbert"
+              target="_blank"
             >
-              <img
-                src="images/youtube.svg"
-                alt="Icone de Youtube"
-                target="_blank"
-              />
+              <img src="images/youtube.svg" alt="Icone de Youtube" />
             </a>
           </li>
-          <li>
-            <a href="https://www.instagram.com/allanrds_/">
-              <img
-                src="images/instagram.svg"
-                alt="Icone de Instagram"
-                target="_blank"
-              />
+          <li class="instagram">
+            <a href="https://www.instagram.com/allanrds_/" target="_blank">
+              <img src="images/instagram.svg" alt="Icone de Instagram" />
             </a>
           </li>
-          <li>
-            <a href="https://web.facebook.com/allan.reymond.564/">
-              <img
-                src="images/facebook.svg"
-                alt="Icone de Facebook"
-                target="_blank"
-              />
+          <li class="facebook">
+            <a
+              href="https://web.facebook.com/allan.reymond.564/"
+              target="_blank"
+            >
+              <img src="images/facebook.svg" alt="Icone de Facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/allan_reymond">
-              <img
-                src="images/twitter.svg"
-                alt="Icone de Twitter"
-                target="_blank"
-              />
+          <li class="twitter">
+            <a href="https://twitter.com/allan_reymond" target="_blank">
+              <img src="images/twitter.svg" alt="Icone de Twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: 'AllanRDS',
+        youtube: 'UCxIQvT8QN7hH3kadLpF3Ppw?&ab_channel=DanEgbert',
+        facebook: 'allan.reymond.564',
+        instagram: 'allanrds_',
+        twitter: 'allan_reymond'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+          /*alert(li.children[0].href)*/
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
