@@ -105,6 +105,14 @@ ul {
   justify-content: center;
 }
 
+.translate {
+  transition-duration: 0.3s;
+}
+.translate:hover {
+  -webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
 
 @media (min-width: 992px) {
   main {
