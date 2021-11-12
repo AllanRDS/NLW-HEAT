@@ -36,7 +36,6 @@ body {
   place-items: center;
 }
 
-
 main {
   background: url(images/background.svg) no-repeat center/cover;
   width: 100vw;
@@ -114,12 +113,41 @@ ul {
   transform: translateY(-8px);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 720px) {
+  body {
+    background-color: rgb(18, 18, 20);
+  }
   main {
-    background: url(images/background.svg);
-    width: 375px;
-    height: 812px;
+    width: 100vw;
+    height: 100vh;
+    min-height: 820px;
+    background: url(./images/Desktopa.svg) no-repeat center/cover;
+  }
+
+  .container {
+    max-width: 22.35rem;
+    height: 33.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .avatar {
+    position: relative;
+  }
+  .avatar > img {
+    margin-top: 1.8rem;
+  }
+
+  .avatar span {
+    position: absolute;
+    top: 0.5rem;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
+
+  #userBio {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 }
-
-
