@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,20 +25,20 @@
           <span>
             <img src="images/build.svg" alt="Selo Rockseat" />
           </span>
-          <img src="images/pp.jpg" alt="Foto Pessoal" />
+          <img src="images/pp.jpg" alt="Foto Pessoal" id="UserImage"/>
         </div>
         <h1 id="userName">Allan Reymond</h1>
-        <a href="https://github.com/AllanRDS" target="_blank">
+        <a id="userLink" href="https://github.com/AllanRDS" target="_blank">
           <img src="images/github.svg" alt="icone github" />
-          AllanRDS
+          <span id="userLogin"> AllanRDS </span>
         </a>
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">An instructor focused on helping pople start programming for web</p>
 
         <ul id="socialLinks">
-          <li class="youtube">
+          <li class="youtube" id="yt">
             <a
-              href="https://www.youtube.com/channel/UCxIQvT8QN7hH3kadLpF3Ppw?&ab_channel=DanEgbert"
+              href="https://www.youtube.com/channel/UCxIQvT8QN7hH3kadLpF3Ppw"
               target="_blank"
             >
               <img src="images/youtube.svg" alt="Icone de Youtube" />
@@ -66,26 +66,6 @@
       </div>
     </main>
 
-    <script>
-      const LinksSocialMedia = {
-        github: 'AllanRDS',
-        youtube: 'UCxIQvT8QN7hH3kadLpF3Ppw?&ab_channel=DanEgbert',
-        facebook: 'allan.reymond.564',
-        instagram: 'allanrds_',
-        twitter: 'allan_reymond'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          /*alert(li.children[0].href)*/
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js" ></script>
   </body>
 </html>
